@@ -2,7 +2,7 @@
 (defvar *init-start-time* (current-time))
 
 (setq load-path (append
-		 (list "~/.emacs.d/"
+		 (list "~/.emacs.d/elisp/"
 		       "~/.local/share/emacs/site-lisp/")
 		 load-path))
 
@@ -185,5 +185,3 @@
 
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
-
-
