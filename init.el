@@ -8,8 +8,11 @@
        load-path))
 
 
-;; C styles
+;; Code styles
 (load-file "~/.emacs.d/c-setup.el")
+
+;; C styles
+(load-file "~/.emacs.d/v-setup.el")
 
 (require 'xcscope)
 (setq cscope-do-not-update-database t)
