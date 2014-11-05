@@ -33,6 +33,9 @@
 ;; doxymacs
 (load-file "~/.emacs.d/doxymacs.el")
 
+;; markdown
+(load-file "~/.emacs.d/markdown.el")
+
 (require 'boxquote)
 
 (put 'narrow-to-region 'disabled nil)
