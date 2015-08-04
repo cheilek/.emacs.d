@@ -4,9 +4,17 @@
 (setq load-path
       (append
        (list "~/.emacs.d/elisp/"
+	     "/usr/local/share/emacs/site-lisp/"
 	     "~/.local/share/emacs/site-lisp/")
        load-path))
 
+
+;; no obnoxious tool bar
+(if (fboundp 'tool-bar-mode)
+    (tool-bar-mode -1))
+
+(set-background-color "black")
+(set-foreground-color "white")
 
 ;; Code styles
 (load-file "~/.emacs.d/c-setup.el")
@@ -14,9 +22,18 @@
 ;; C styles
 (load-file "~/.emacs.d/v-setup.el")
 
-(require 'xcscope)
-(setq cscope-do-not-update-database t)
-
+(cond
+   ((string-equal system-type "gnu/linux") ; Linux
+    (progn (message "Linux"))
+    (require 'xcscope)
+    (setq cscope-do-not-update-database t)
+    )
+   ((string-equal system-type "darwin") ; Mac OS X
+    (progn (message "Mac OS X"))
+    (setq mac-option-modifier nil) ;; Default was meta
+    (setq mac-command-modifier 'meta)
+    )
+)
 
 ;; markdown mode
 ;;(autoload 'markdown-mode "markdown-mode" "Major mode for editing Markdown files" t)
