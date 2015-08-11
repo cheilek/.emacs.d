@@ -68,10 +68,8 @@
 
 (setq frame-title-format `(,(user-login-name) "@" ,(system-name) "  [%b]" ))
 
-(add-hook 'text-mode-hook 'flyspell-mode)
-(add-hook 'c-mode-common-hook
-          'flyspell-prog-mode)
-
+;; Spelling
+(load-file "~/.emacs.d/spell.el")
 
 ;; set up a bunch of auto-mode-alist stuff
 (load-file "~/.emacs.d/auto-mode-alist-setup.el")

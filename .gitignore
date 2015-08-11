@@ -1,0 +1,4 @@
+# emacs.d Ignores.
+
+auto-save-list/
+cache/
