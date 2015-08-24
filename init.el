@@ -23,22 +23,21 @@
 (load-file "~/.emacs.d/v-setup.el")
 
 (cond
-   ((string-equal system-type "gnu/linux") ; Linux
-    (progn (message "Linux"))
-    (require 'xcscope)
-    (setq cscope-do-not-update-database t)
-    )
    ((string-equal system-type "darwin") ; Mac OS X
     (progn (message "Mac OS X"))
+    (let ((default-directory "/usr/local/share/emacs/site-lisp/"))
+      (normal-top-level-add-subdirs-to-load-path))
     (setq mac-option-modifier nil) ;; Default was meta
     (setq mac-command-modifier 'meta)
     )
 )
 
-;; markdown mode
-;;(autoload 'markdown-mode "markdown-mode" "Major mode for editing Markdown files" t)
+;; xcscope from HomeBrew.
+(require 'xcscope)
+(setq cscope-do-not-update-database t)
+(cscope-setup)
 
-					; backups
+;; backups
 (load-file "~/.emacs.d/backups.el")
 
 ;; saveplace
