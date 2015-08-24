@@ -8,7 +8,6 @@
 	     "~/.local/share/emacs/site-lisp/")
        load-path))
 
-
 ;; no obnoxious tool bar
 (if (fboundp 'tool-bar-mode)
     (tool-bar-mode -1))
@@ -25,6 +24,8 @@
 (cond
    ((string-equal system-type "darwin") ; Mac OS X
     (progn (message "Mac OS X"))
+    (let ((default-directory "/usr/local/share/emacs/site-lisp/"))
+      (normal-top-level-add-subdirs-to-load-path))
     (setq mac-option-modifier nil) ;; Default was meta
     (setq mac-command-modifier 'meta)
     )
