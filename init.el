@@ -25,17 +25,17 @@
 (cond
    ((string-equal system-type "darwin") ; Mac OS X
     (progn (message "Mac OS X"))
-    (let ((default-directory "/usr/local/share/emacs/site-lisp/"))
-      (normal-top-level-add-subdirs-to-load-path))
     (setq mac-option-modifier nil) ;; Default was meta
     (setq mac-command-modifier 'meta)
     )
 )
 
+;; SGML styles
+(load-file "~/.emacs.d/sgml-setup.el")
+
 ;; xcscope from HomeBrew.
 (require 'xcscope)
 (setq cscope-do-not-update-database t)
-(cscope-setup)
 
 ;; backups
 (load-file "~/.emacs.d/backups.el")
