@@ -1,7 +1,6 @@
 ;; spell
 
 (autoload 'ispell-word "ispell.el")
-(setq ispell-local-dictionary "english")
 
 (cond
    ((string-equal system-type "darwin") ; Mac OS X
