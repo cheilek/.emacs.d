@@ -18,3 +18,5 @@
 (add-to-list 'auto-mode-alist '("/.gitconfig". conf-mode))
 
 (add-to-list 'auto-mode-alist '("/.*patch$" . diff-mode))
+
+(add-to-list 'auto-mode-alist '("\\.sdl$" . javascript-mode))
