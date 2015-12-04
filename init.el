@@ -68,6 +68,9 @@
 
 (setq frame-title-format `(,(user-login-name) "@" ,(system-name) "  [%b]" ))
 
+; http://superuser.com/questions/277956/emacs-variable-to-open-with-in-original-frame
+(setq ns-pop-up-frames nil)
+
 ;; Spelling
 (load-file "~/.emacs.d/spell.el")
 
