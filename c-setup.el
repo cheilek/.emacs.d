@@ -2,7 +2,7 @@
 
 ;; c.f. http://inst.eecs.berkeley.edu/~cs47b/emacs/lisp/cc-mode/cc-styles.el
 
-(defconst xockets-c-style
+(defconst basic-c-style
   '((c-basic-offset . 4)
     (c-auto-newline)
     (comment-multi-line t)
@@ -14,7 +14,7 @@
      (substatement-open . 0)
      (label . 0)
      (case-label . 0)))
-  "Xockets C Style for CC-MODE")
+  "Basic C Style for CC-MODE")
 
 ;;
 ;; LwIP Style based on:
@@ -43,7 +43,7 @@
           (lambda ()
             ;; Add Xockets style
             (c-add-style
-             "XOCKETS" xockets-c-style)))
+             "Basic C Style" basic-c-style)))
 
 ;;
 ;; Linux style as required in Documentation/CodingStyle
@@ -99,7 +99,7 @@
 		  (message "Kernel mode: %s" filename)
 		  (c-set-style "linux-tabs-only"))
 		(progn
-		  (message "Xockets mode: %s" filename)
-		  (c-set-style "XOCKETS")
+		  (message "Basic mode: %s" filename)
+		  (c-set-style "Basic")
 		  (setq indent-tabs-mode nil))))))
 
