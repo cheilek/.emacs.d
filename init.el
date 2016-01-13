@@ -12,8 +12,9 @@
 (if (fboundp 'tool-bar-mode)
     (tool-bar-mode -1))
 
-(set-background-color "black")
-(set-foreground-color "white")
+; Alun likes white on black ... I've come to accept black on white.
+;(set-background-color "black")
+;(set-foreground-color "white")
 
 ;; Code styles
 (load-file "~/.emacs.d/c-setup.el")
@@ -48,7 +49,7 @@
 (load-file "~/.emacs.d/recentf.el")
 
 ;; doxymacs
-(load-file "~/.emacs.d/doxymacs.el")
+;(load-file "~/.emacs.d/doxymacs.el")
 
 ;; markdown
 (load-file "~/.emacs.d/markdown.el")
@@ -92,8 +93,8 @@
   ;; If there is more than one, they won't work right.
  '(inhibit-startup-screen t)
  '(initial-major-mode (quote text-mode))
- '(user-full-name "Alun Evans")
- '(user-mail-address "alun.evans@xockets.com"))
+ '(user-full-name "Alan Cheilek")
+ '(user-mail-address "cheilek@bassclef.org"))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
